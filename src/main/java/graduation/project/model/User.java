@@ -1,12 +1,12 @@
 package graduation.project.model;
 
+import graduation.project.repository.UserType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -21,8 +21,21 @@ public class User {
     private Long userId;
 
     private String username;
+
+    @Email
+    private String email;
+
+    private String password;
+
     private int age;
+
     private String gender;
 
+    @Column(name = "userType")
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
+
+    @Column(nullable = true)
+    private String busNumber;
 
 }

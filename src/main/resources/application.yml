@@ -27,7 +27,7 @@ spring:
             clientSecret: XQ1t4NLRLt
             clientAuthenticationMethod: post
             authorizationGrantType: authorization_code
-            redirectUri: "http://localhost:8080/login/oauth2/code/naver"
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - nickname
               - email
@@ -38,7 +38,7 @@ spring:
             clientSecret: aY0Jblok0rMQIMLadPXnX1jRrbbuRK0h
             clientAuthenticationMethod: post
             authorizationGrantType: authorization_code
-            redirectUri: "http://localhost:8080/login/oauth2/code/kakao"
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - profile_nickname
               - profile_image
