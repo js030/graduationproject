@@ -18,15 +18,5 @@ public class AuthService {
 
     private final UserRepository userRepository;
 
-    @PostConstruct
-    public void initialStart(){
-        User user1 = new User(null, "kh","abc@abc", "4234", 24, "남성", UserType.BLIND, null);
-        User user2 = new User(null, "sj", "cdb@cdb", "123", 23, "여성", UserType.DRIVER, "15");
-        userRepository.save(user1);
-        userRepository.save(user2);
-    }
-
-
-
 }
 
